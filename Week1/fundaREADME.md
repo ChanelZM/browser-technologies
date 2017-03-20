@@ -70,8 +70,8 @@ With the new information I got, it's time to 'refactor' the code I made for Fund
 ### Font-stacking
 Funda only uses two fonts, so font-stacking can be very helpful here to maintain the same design.
 
-### Errorpage for JavaScript
-If JavaScript is turned off, give the users a page where I explain that JS is turned off and that the website won't work without.
+### Write server-sided using Node.js
+Node.js is js without really using js. It's still usable when JavaScript is turned off. If I write everything with Node.js, the app will work.
 
 ### Check contrast
 I don't have a feeling that the contrast is going to be horrific, but it doesn't hurt to test it with simulators. 
