@@ -8,7 +8,7 @@ Pictures have (most of the time) the biggest filesizes and that's why loading th
 It's our responsibility to create a website that is still usable when images, for some reason, are not displayed. And when they are visible, that they do not interfere too much with the loading time of the content.
 
 ##### Ways you can optimize:
-- Add an ```alt=""``` to your ```<img />``` so when the picture doesn't load, people still know what was on the picture.
+- Add an ```alt=""``` to your ```<img />``` so when the picture doesn't load, people still know what was displayed on the picture.
 - Paste the ```<img />``` into a ```<picture>``` and use different sizes for different screens.
 - Compress the excisting images. Maybe the filesize will get smaller without losing quality.
 - Use fileformat WEBP for your pictures, but do you use fallbacks for this one, since not every browser knows what to do with it.
@@ -81,6 +81,9 @@ Funda has a lot of images so testing the page on slower internet will give me a 
 
 ### Use SQLite for storage
 In the funda code I do have a fallback for when localStorage isn't available but experimenting with other options doesn't hurt.
+
+### Make the app work without images
+Right now the app is only working when the pictures are loaded. That's really bad, so the most important thing actually is to make it work without images.
 
 ## Sources
 1. Kryogenix.org. (no date). *Everybody has JavaScript, right?*. Source: https://kryogenix.org/code/browser/everyonehasjs.html
