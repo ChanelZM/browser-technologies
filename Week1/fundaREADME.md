@@ -25,7 +25,6 @@ There was a period of time where developers were jumping up and down for custom 
 When JavaScript was created, it added a lot more possibilities to the web. Everyone started using the new language, it made your website even better. Soon websites could only work if JavaScript was loaded, which provided some complications, because there were a lot of reasons why JavaScript regularly failed to load, such as HTTP Request failed, firewall bocks JS, ISP or mobile operator interfere with JS download, JS is turned off, CDN down and browser doesn't support written JS (1). Please, let your website work without JS.
 
 ##### Ways you can optimize:
-- Don't use JavaScript at all. It seems impossible, but it's not. Everything you can do with JavaScript you can do with server sided languages.
 - Make sure your website's content is still viewable, when JavaScript isn't loaded. You can do this by placing the ``<script>`` at the bottom of the page inside the body or in the head with a ```defer``` attribute.
 - (Last resort) Give the user some feedback why your page isn't working. If you really don't know how to make your page work without JS then at least give them feedback.
 
@@ -52,11 +51,10 @@ A few years ago a new law required asking the user for permission to save user i
 - Server-based session storage(2). The performance will be better and it is more secure.
 
 ### 7. You shall not depend on *localStorage*
-The difference between cookies and localStorage is that cookies are saved on the server and localStorage on the computer of the user, which can be pretty helpful. LocalStorage is great for when your website doesn't have a server-side, isn't pushing logins after interactivity or when it only lives on the client (3). But (there is always a but) localStorage doesn't work on all browsers and it doesn't work all the time. Plus it has limited capacity.
+The difference between cookies and localStorage is that cookies are both client side and server side and localStorage is only client side (5). LocalStorage is great for when your website doesn't have a server-side, isn't pushing logins after interactivity or when it only lives on the client (3). But (there is always a but) localStorage doesn't work on all browsers and it doesn't work all the time. Plus it has limited capacity.
 
 ##### Ways you can optimize:
-- When you do want to store something, use the server (2).
-- SQLite. SQLite is an embedded database. Each application has it's own database and it does not need to run on a server(4). 
+- When you do want to store something, use the server (2). 
 
 ### 8. You're website shall work without usage of a *Mouse/Trackpad*
 Believe it or not, not everyone uses (or owns) a mouse/trackpad. Some people don't like them and some people have a physical disability and can't use them. These people use the the keyboard to navigate the page.
@@ -89,3 +87,4 @@ In the funda code I do have a fallback for when localStorage isn't available but
 2. Grove, R. (August 12, 2008). *Why you probably shouldn't use cookies to store session data*. Source: http://wonko.com/post/why-you-probably-shouldnt-use-cookies-to-store-session-data
 3. Fox, P.. (no date). *Local Storage Use Not Abuse*. Source: http://localstorage-use-not-abuse.appspot.com/
 4. Morony, J. (January 31, 2017). *A Summary of Local Storage Options for PhoneGap Applications*. Source: https://www.joshmorony.com/a-summary-of-local-storage-options-for-phonegap-applications/
+5. Chaudhary, A. (January 5, 2016). *Difference between Local Storage, Session Storage and Cookies*. Source: http://www.c-sharpcorner.com/uploadfile/cd7c2e/difference-between-local-storage-session-storage-ans-cookie/
