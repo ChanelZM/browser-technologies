@@ -79,9 +79,6 @@ I don't have a feeling that the contrast is going to be horrific, but it doesn't
 ### Test the webpage on slower internet using DevTools.
 Funda has a lot of images so testing the page on slower internet will give me a good insight on how fast the page is and how I can make it better.
 
-### Use SQLite for storage
-In the funda code I do have a fallback for when localStorage isn't available but experimenting with other options doesn't hurt.
-
 ### Make the app work without images
 Right now the app is only working when the pictures are loaded. That's really bad, so the most important thing actually is to make it work without images.
 
