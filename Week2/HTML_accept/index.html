@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo: Accept</title>
+</head>
+<body>
+   <h1>Photograph contest!</h1>
+   <p>Upload below your contest picture</p>
+    <input type="file" id="file">
+    <button type="submit">Upload my super awesome picture</button>
+    <script>
+        var input = document.getElementById('file');
+        
+        input.setAttribute("accept", "image/*");
+        console.log(input.getAttribute("accept"));
+    </script>
+</body>
+</html>
