@@ -22,7 +22,7 @@ Meter has a start and an end tag. We could use this to put fallbacks between the
 - ```optimum="0.5"``` tells us the optimum value of the bar.(1)
 
 ## About the demo and fallbacks
-[DEMO](https://chanelzm.github.io/browser-technologies/Week2/HTML_meter)
+[DEMO](https://chanelzm.github.io/browser-technologies/Week2/HTML_meter/)
 
 In the demo I used a ```<div>``` and ```<span>``` inside ```<meter>```. If the browser supports ```<meter>``` it will ignore what's inside of it. If the browser doesn't know ```<meter>``` it will ignore the tag and use what's inside of the tag.
 
