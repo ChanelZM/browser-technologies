@@ -1,0 +1,10 @@
+.meter-fallback {
+    background-color: lightgray;
+    width: 15rem;
+}
+.meter-fraction {
+    background-color: green;
+    color: transparent;
+    display: inline-block;
+    width: 7.5rem;
+}
