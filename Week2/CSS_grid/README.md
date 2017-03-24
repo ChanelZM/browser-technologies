@@ -86,5 +86,44 @@ You could also use shorthands to compress your code.
 ## About the demo and fallbacks
 [DEMO](https://chanelzm.github.io/browser-technologies/Week2/CSS_grid/)
 
+In the demo the block-like structure works first works on float, because float works on every browser. The sections in the body are ```inline-block``` and they are given a specific width, then float is used to create a block structure. The code looks like this (on desktop):
+```
+section {
+    float: right;
+    width: 20rem;
+}
+```
+
+With ```@supports``` feature detection flexbox is being used to create that same kind of block-structure. The code looks like this:
+```
+@supports(display:flex) {
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    section {
+        width: 20rem;
+    }
+}
+```
+
+And lastly, when the browser does support Grid Layout. I use this code to make the same block-structure but with different cell widths, the strength of Grid Layout:
+```
+@supports(display:grid){
+    section {
+        width: auto;
+    }
+    body {
+        grid-template-columns: auto 30rem auto;
+        grid-template-rows: 20rem 25rem 22rem 21rem;
+        grid-column-gap: 1rem;
+        grid-row-gap: 2rem;
+    }
+}
+```
+
+The block-structure is also responsive (with all three features).
+
 ## Sources
 1. House, C. (March 22, 2017). *A Complete Guide to Grid*. Source: https://css-tricks.com/snippets/css/complete-guide-grid/
