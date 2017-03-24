@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo: JS Promises</title>
+</head>
+<body>
+    <script>
+        var myFirstPromise = new Promise(function(resolve, reject){
+            var sum = 2 + 1;
+            sum == 4 ? resolve():reject();
+        });
+        
+        myFirstPromise.then(function(){
+            console.log('yes!');
+        }).catch(function(){
+            console.log('no');
+        });
+    </script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 CSS variables work simular to JavaScript variables. You use a name to reference to a set value. Further on in your stylesheet you call the variable again to get the value. Very helpful when you don't want to repeat yourself. It also saves you (well, me personally) some time, because you don't know all the hex colors you use by heart and then you have to scroll back and find the hexcolor. Variables that have names people easily remember you won't have that problem.
 
 ## Browser support
-![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/CSS_grid/CanIUse_variables.png)
+![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/CSS_variables/CanIUse_variables.png)
 
 ## Syntax
 ```
