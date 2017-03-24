@@ -3,7 +3,7 @@
 CSS Grid Layout is designed for a two dimensional design, where flexbox was made for a one dimensional design. With flexbox you could only tell which direction the content was supposed to go and try to get every thing in a block-like structure with flex-wrap. With Grid Layout you could easily make a block structure by telling every individual block where to start and end. You can also give the gutter a with.
 
 ## Browser support
-![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/HTML_meter/img/CanIUse_grid.png)
+![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/CSS_grid/CanIUse_grid.png)
 
 ## Syntax
 ```
