@@ -12,9 +12,17 @@
         });
         
         myFirstPromise.then(function(){
-            console.log('yes!');
+            var feedback = document.createElement("p");
+            var text = document.createTextNode("Yes, that's true!");
+
+            feedback.appendChild(text);
+            document.body.appendChild(feedback);
         }).catch(function(){
-            console.log('no');
+            var feedback = document.createElement("p");
+            var text = document.createTextNode("No, that's not true!");
+
+            feedback.appendChild(text);
+            document.body.appendChild(feedback);
         });
     </script>
 </body>
