@@ -26,7 +26,7 @@ First you declare the variable by setting a name and after the dots the value of
 [DEMO](https://chanelzm.github.io/browser-technologies/Week2/CSS_variables/)
 
 When the browser doesn't support variables it falls back to the usual hexcode, which looks like this:
-```
+```CSS
 blockquote {
     border-bottom: 3px solid #2c3c65;
     border-top: 3px solid #2c3c65;
