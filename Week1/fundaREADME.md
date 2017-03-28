@@ -1,9 +1,9 @@
 # Assignment 1.2: Funda Refactor
 ## Introduction
 ## The 8* commandments of Progressive Enhancement
-**There are more, but these are the ones we focused on.*
+**There are more, but these are the ones we focused on.**
 ### 1. You shall not depend on *pictures*
-Pictures have (most of the time) the biggest filesizes and that's why loading them can take quite some time. And when we're browsing the web, we want to do it fast and we don't want to have the feeling that it's taking forever to load. So optimizing images is crucial. But some people have images turned off as default setting so that it saves them MB's. 
+Pictures have (most of the time) the biggest filesizes and that's why loading them can take quite some time. And when we're browsing the web, we want to do it fast and we don't want to have the feeling that it's taking forever to load. So optimizing images is crucial. But some people have images turned off as default setting so that it saves them MB's.
 
 It's our responsibility to create a website that is still usable when images, for some reason, are not displayed. And when they are visible, that they do not interfere too much with the loading time of the content.
 
@@ -54,7 +54,7 @@ A few years ago a new law required asking the user for permission to save user i
 The difference between cookies and localStorage is that cookies are both client side and server side and localStorage is only client side (5). LocalStorage is great for when your website doesn't have a server-side, isn't pushing logins after interactivity or when it only lives on the client (3). But (there is always a but) localStorage doesn't work on all browsers and it doesn't work all the time. Plus it has limited capacity.
 
 ##### Ways you can optimize:
-- When you do want to store something, use the server (2). 
+- When you do want to store something, use the server (2).
 
 ### 8. You're website shall work without usage of a *Mouse/Trackpad*
 Believe it or not, not everyone uses (or owns) a mouse/trackpad. Some people don't like them and some people have a physical disability and can't use them. These people use the the keyboard to navigate the page.
@@ -74,7 +74,7 @@ Funda only uses two fonts, so font-stacking can be very helpful here to maintain
 Node.js is js without really using js. It's still usable when JavaScript is turned off. If I write everything with Node.js, the app will work.
 
 ### Check contrast
-I don't have a feeling that the contrast is going to be horrific, but it doesn't hurt to test it with simulators. 
+I don't have a feeling that the contrast is going to be horrific, but it doesn't hurt to test it with simulators.
 
 ### Test the webpage on slower internet using DevTools.
 Funda has a lot of images so testing the page on slower internet will give me a good insight on how fast the page is and how I can make it better.
