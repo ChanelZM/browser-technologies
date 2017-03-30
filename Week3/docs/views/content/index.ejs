@@ -1,6 +1,15 @@
 <%- include('../partials/header.ejs') %>
   <section>
     <h2>Mijn tosti lijstje</h2>
+    <% if(myList == "undefined"){} else { %>
+      <ul>
+        <% for(var key in myList){ %>
+          <li>
+            <%= myList[key].replace('-', ' '); %>
+          </li>
+        <%}%>
+      </ul>
+    <% } %>
   </section>
   <form method="post" enctype="multipart/form-data">
     <h2>Ingrediënten</h2>
@@ -47,6 +56,10 @@
         <li>
           <input type="checkbox" name="siege" value="Salami" id="salami" />
           <label for="salami">Salami</label>
+        </li>
+        <li>
+          <input type="checkbox" name="siege" value="Ham" id="ham" />
+          <label for="ham">Ham</label>
         </li>
         <li>
           <input type="checkbox" name="siege" value="Kalkoenfilet" id="kalkoenfilet" />
