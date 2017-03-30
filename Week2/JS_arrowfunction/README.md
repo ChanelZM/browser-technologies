@@ -10,4 +10,4 @@
 [DEMO](https://chanelzm.github.io/browser-technologies/Week2/JS_promises/)
 
 ## Source
-Walsh, D. (May 7, 2015). *ES6: Features By Testing*. Source: https://davidwalsh.name/es6-features-testing
+1. Walsh, D. (May 7, 2015). *ES6: Features By Testing*. Source: https://davidwalsh.name/es6-features-testing

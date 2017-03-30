@@ -8,6 +8,16 @@
 </head>
 <body>
   <script>
+  var arrows;
+
+  try {
+    new Function("(y => y)");
+    arrows = true;
+  } catch(err) {
+    arrows = false;
+  }
+
+  console.log(arrows);
   </script>
 </body>
 </html>
