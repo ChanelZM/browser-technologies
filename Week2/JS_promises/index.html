@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <title>Demo: JS Promises</title>
 </head>
+<h1>The sum</h1>
+<p>
+  If the browser supports Promises then you will see "Yes, that's true!" down below.
+</p>
+<p>
+  If the browser doesn't support Promises then you will see "No, that's not true!" down below.
+</p>
 <body>
     <script>
         if(typeof Promise !== "undefined"){
           new Promise(function(resolve, reject){
               var sum = 2 + 1;
-              sum == 4 ? resolve():reject();
+              sum == 3 ? resolve():reject();
           }).then(function(){
               var feedback = document.createElement("p");
               var text = document.createTextNode("Yes, that's true!");
@@ -25,7 +32,7 @@
           });
         } else {
           var sum = 2 + 1;
-          if(sum == 3){
+          if(sum == 4){
               var feedback = document.createElement("p");
               var text = document.createTextNode("Yes, that's true!");
 
@@ -33,7 +40,7 @@
               document.body.appendChild(feedback);
           } else {
               var feedback = document.createElement("p");
-              var text = document.createTextNode("No, that's not true");
+              var text = document.createTextNode("No, that's not true!");
 
               feedback.appendChild(text);
               document.body.appendChild(feedback);
