@@ -3,7 +3,7 @@
 Arrow functions are pretty simple. They are a short version of a regular unnamed function (2). You don't need the word ```function``` anymore to declare a function and ```return``` that tells us what to give back. In very short versions you don't even need ```{}``` and ```()```
 
 ## Browser support
-![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/JS_promises/CanIUse_arrow.png)
+![Picture of the website Can I Use which indicates browser support.](https://github.com/ChanelZM/browser-technologies/blob/master/Week2/JS_arrowfunction/CanIUse_arrow.png)
 
 ## Syntax
 "Long" version
