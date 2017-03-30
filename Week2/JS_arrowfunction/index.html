@@ -8,23 +8,15 @@
 </head>
 <body>
   <script>
-  var test;
   var newMessage;
 
   try {
-    new Function( "(y => y)" );
-    test = true;
-  } catch(err){
-    test = false;
-  }
-
-  if(test == true){
-    //newMessage = ()=>{return 'Yaaasss, we executed an arrow function'};
+    newMessage = ()=>{return 'Yaaasss, we executed an arrow function'};
     var feedback = document.createElement("h1");
     var text = document.createTextNode(newMessage());
     feedback.appendChild(text);
     document.body.appendChild(feedback);
-  } else {
+  } catch(err) {
     newMessage = function(){return "Your browser isn't cool enough for arrow functions"};
     console.log(newMessage());
     var feedback = document.createElement("h1");
@@ -32,21 +24,6 @@
     feedback.appendChild(text);
     document.body.appendChild(feedback);
   }
-
-  // try {
-  //   newMessage = ()=>{return 'Yaaasss, we executed an arrow function'};
-  //   var feedback = document.createElement("h1");
-  //   var text = document.createTextNode(newMessage());
-  //   feedback.appendChild(text);
-  //   document.body.appendChild(feedback);
-  // } catch(err) {
-  //   newMessage = function(){return "Your browser isn't cool enough for arrow functions"};
-  //   console.log(newMessage());
-  //   var feedback = document.createElement("h1");
-  //   var text = document.createTextNode(newMessage());
-  //   feedback.appendChild(text);
-  //   document.body.appendChild(feedback);
-  // }
   </script>
 </body>
 </html>
