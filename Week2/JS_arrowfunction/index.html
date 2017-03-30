@@ -8,16 +8,30 @@
 </head>
 <body>
   <script>
-  var arrows;
+  var newMessage;
 
   try {
-    new Function("(y => y)");
-    arrows = true;
+    newMessage = ()=>{return 'Yaaasss, we executed an arrow function'};
+    var feedback = document.createElement("h1");
+    var text = document.createTextNode(newMessage());
+    feedback.appendChild(text);
+    document.body.appendChild(feedback);
   } catch(err) {
-    arrows = false;
+    newMessage = function(){return "Your browser isn't cool enough for arrow functions"};
+    var feedback = document.createElement("h1");
+    var text = document.createTextNode(newMessage());
+    feedback.appendChild(text);
+    document.body.appendChild(feedback);
   }
-
-  console.log(arrows);
+  //
+  // function noArrow(){
+  //   message = "Your browser isn't cool enough for arrow functions";
+  //   var feedback = document.createElement("h1");
+  //   var text = document.createTextNode(newMessage);
+  //
+  //   feedback.appendChild(text);
+  //   document.body.appendChild(feedback);
+  // }
   </script>
 </body>
 </html>
