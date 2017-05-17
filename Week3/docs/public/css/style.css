@@ -1,3 +1,4 @@
+/* GLOBAL */
 body {
   background-color: #333333;
   color: white;
@@ -12,10 +13,6 @@ h1 {
   font-size: 4em;
   margin-left: 480px;
   margin-left: 30rem;
-}
-
-form > h2 {
-  display: none;
 }
 
 h2 {
@@ -42,6 +39,10 @@ ul {
 
 li {
   list-style: none;
+}
+
+form > h2 {
+  display: none;
 }
 
 form li {
@@ -102,6 +103,7 @@ input[type="submit"]:focus {
   outline: none;
 }
 
+/* GROCERY LIST */
 .grocerylist {
   background-color: white;
   color: black;
