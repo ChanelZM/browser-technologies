@@ -41,6 +41,7 @@ ul {
 }
 
 li {
+  cursor: move;
   list-style: none;
 }
 
@@ -48,6 +49,7 @@ form li {
   font-size: 1.5em;
   margin-bottom: 16px;
   margin-bottom: 1rem;
+  position: relative;
 }
 
 label {
@@ -57,32 +59,44 @@ label {
   cursor: pointer;
   display: block;
   padding: 16px;
+  padding-left: 32px;
   padding: 1rem;
 }
 
 input[type="checkbox"]{
-  clip: rect(0, 0, 0, 0);
   position: absolute;
+  left: 12px;
+  top: 24px;
 }
 
-input[type="checkbox"]:checked + label {
-  background-color: #ffbf80;
-}
+@supports(clip: rect(0, 0, 0, 0)){
+  input[type="checkbox"]{
+    clip: rect(0, 0, 0, 0);
+  }
 
-input[type="checkbox"]:focus + label {
-  outline: 10px #3399ff solid;
-}
+  input[type="checkbox"]:checked + label {
+    background-color: #ffbf80;
+  }
 
-input[type="submit"]{
-  background-color: #3399ff;
-  border: none;
-  border-radius: 4px;
-  color: white;
-  cursor: pointer;
-  padding: 0 2em 0.4em 2em;
-  text-align: center;
-  font-family: 'Pacifico', cursive;
-  font-size: 2em;
+  input[type="checkbox"]:focus + label {
+    outline: 10px #3399ff solid;
+  }
+
+  input[type="submit"]{
+    background-color: #3399ff;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    cursor: pointer;
+    padding: 0 2em 0.4em 2em;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+  }
+
+  label {
+    padding: 1rem;
+  }
 }
 
 input[type="submit"]:focus {
@@ -93,6 +107,7 @@ input[type="submit"]:focus {
 .grocerylist {
   background-color: white;
   color: black;
+  display: block;
   padding: 2rem;
   position: fixed;
   top: 0;
@@ -119,4 +134,23 @@ input[type="submit"]:focus {
   right: 16px;
   right: 1rem;
   text-align: right;
+}
+
+.groceryitem label {
+    background-color: inherit;
+    padding: 0;
+}
+
+.mylist {
+    height: 90%;
+}
+
+.dropzone {
+    background-color: #f7f2ed;
+    box-sizing: border-box;
+    border: 3px dashed black;
+}
+
+.drophere {
+ background-color: #ffbf80;
 }

@@ -8,7 +8,7 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-var addRouter = require('./js/add');
+var addRouter = require('./routes/add');
 app.use('/', addRouter);
 
 app.set('views', path.join(__dirname, 'views'));
