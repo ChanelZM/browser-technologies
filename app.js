@@ -17,6 +17,6 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 
-app.listen(3000, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log("Running at port 3000");
 });

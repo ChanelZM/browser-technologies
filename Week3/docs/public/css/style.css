@@ -1,0 +1,159 @@
+body {
+  background-color: #333333;
+  color: white;
+  font-family: 'Crimson Text', serif;
+  margin: 0;
+}
+
+h1 {
+  color: #ff9933;
+  font-family: 'Pacifico', cursive;
+  font-size: 64px;
+  font-size: 4em;
+  margin-left: 480px;
+  margin-left: 30rem;
+}
+
+form > h2 {
+  display: none;
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+h3 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+}
+
+form {
+  margin-left: 480px;
+  margin-left: 30rem;
+  margin-bottom: 16px;
+  margin-bottom: 2rem;
+  width: 800px;
+  width: 50rem;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style: none;
+}
+
+form li {
+  font-size: 1.5em;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+label {
+  background-color: white;
+  border-radius: 4px;
+  color: #333333;
+  cursor: pointer;
+  display: block;
+  padding: 16px;
+  padding-left: 32px;
+}
+
+input[type="checkbox"]{
+  position: absolute;
+  left: 12px;
+  top: 24px;
+}
+
+@supports(clip: rect(0, 0, 0, 0)){
+  input[type="checkbox"]{
+    clip: rect(0, 0, 0, 0);
+  }
+
+  label {
+      padding: 1rem;
+  }
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #ffbf80;
+}
+
+input[type="checkbox"]:focus + label {
+  outline: 10px #3399ff solid;
+}
+
+input[type="submit"]{
+  background-color: #3399ff;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  padding: 0 2em 0.4em 2em;
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+  font-size: 2em;
+}
+
+input[type="submit"]:focus {
+  background-color: #ff9933;
+  outline: none;
+}
+
+.grocerylist {
+  background-color: white;
+  color: black;
+  display: block;
+  padding: 32px;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 320px;
+  width: 20rem;
+}
+
+.grocerylist li {
+  background-color: #dddddd;
+  border-radius: 4px;
+  font-size: 1.3em;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  position: relative;
+  padding: 16px;
+  padding: 1rem;
+}
+
+.remove {
+  content: '\00d7';
+  position: absolute;
+  right: 16px;
+  right: 1rem;
+  text-align: right;
+}
+
+.groceryitem label {
+    background-color: inherit;
+    padding: 0;
+}
+
+.mylist {
+    height: 90%;
+}
+
+.cursor {
+    cursor: move;
+}
+
+.dropzone {
+    background-color: #f7f2ed;
+    box-sizing: border-box;
+    outline: 3px dashed black;
+}
+
+.drophere {
+ background-color: #ffbf80;
+}
