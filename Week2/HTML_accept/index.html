@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo: Accept</title>
+</head>
+<body>
+   <h1>Photograph contest!</h1>
+   <p>Upload below your contest picture</p>
+    <input type="file" accept=".png, .jpg" id="file">
+    <button type="submit" id="button">Upload my super awesome picture</button>
+    <p>You can only upload PNG or JPG pictures.</p>
+    <script>
+        var button = document.getElementById('button');
+        var input = document.getElementById('file');
+        
+        input.addEventListener("change", function(){
+            if(document.getElementById("file").value.match(".jpg$") ||          document.getElementById("file").value.match(".png$")){
+                document.querySelector("body > p:last-of-type").remove();
+                var feedback = document.createElement("p");
+                var text = document.createTextNode("Superb!");
+                
+                feedback.appendChild(text);
+                document.body.appendChild(feedback);
+            } else {
+                document.querySelector("body > p:last-of-type").remove();
+                var feedback = document.createElement("p");
+                var text = document.createTextNode("This is not a PNG or JPG!");
+                
+                feedback.appendChild(text);
+                document.body.appendChild(feedback);
+            }
+        });
+    </script>
+</body>
+</html>
