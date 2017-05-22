@@ -1,11 +1,23 @@
 (function (){
+    var groceryButton = document.querySelector('.togglegrocery'),
+        groceryList = document.querySelector('.grocerylist'),
+        form = document.querySelector('form');
+
+    function showGroceryList(){
+        groceryList.style.width = '70%';
+    }
+
+    function hideGroceryList(){
+        groceryList.style.width = '0';
+    }
+
     //Check if browser supports addEventListener
     //Credits to: http://stackoverflow.com/questions/39272718/how-do-i-detect-document-addeventlistener-support-in-javascript
     if(document.addEventListener){
-        var dropSection = document.querySelector('.mylist');
+        var dropSection = document.querySelector('.mylist'),
         //var submit = document.querySelector('input[type="submit"]');
-        var listItems = document.querySelectorAll('form li');
-        var dragEl;
+            listItems = document.querySelectorAll('form li'),
+            dragEl;
 
         //submit.style.display = 'none';
 
@@ -14,11 +26,11 @@
             //When drag starts add class and save the target
             starts: function(e){
                 dropSection.classList.add('dropzone');
-
                 dragEl = this;
 
                 e.dataTransfer.effectAllowed = 'move';
-                e.dataTransfer.setData('text/html', this.innerHTML);
+
+                e.dataTransfer.setData('Text', this.innerHTML);
 
             },
             //Make sure no redirect is fired
@@ -41,7 +53,7 @@
 
                 if(dragEl != this){
                     dragEl = this.innerHTML;
-                    this.innerHTML += '<li class="groceryitem">' + e.dataTransfer.getData('text/html') + '</li>';
+                    this.innerHTML += '<li class="groceryitem">' + e.dataTransfer.getData('Text') + '</li>';
                 }
 
                 return false;
@@ -49,22 +61,46 @@
             //Clear the html of the list, so that item can't be added again, also remove the classes.
             end: function(e){
                 //Clear target
-                e.target.innerHTML = '';
+                //e.target.innerHTML = '';
+                e.target.draggable = false;
                 dropSection.classList.remove('drophere');
                 dropSection.classList.remove('dropzone');
             }
         }
 
         //For every list item create addEventListeners
-        listItems.forEach(function(item){
-            item.classList.add('cursor');
-            item.addEventListener('dragstart', handleDrag.starts);
-            item.addEventListener('dragend', handleDrag.end);
-        });
+        for(var i = 0; i < listItems.length; i++){
+            listItems[i].classList.add('cursor');
+            listItems[i].addEventListener('dragstart', handleDrag.starts);
+            listItems[i].addEventListener('dragend', handleDrag.end);
+        }
 
         //Add eventListeners to the section of the dropzone
         dropSection.addEventListener('dragenter', handleDrag.enter);
         dropSection.addEventListener('dragover', handleDrag.over);
         dropSection.addEventListener('drop', handleDrag.drop);
+
+        groceryButton.addEventListener('click', showGroceryList);
+
+        if(groceryList.style.width != '0'){
+            form.addEventListener('click', hideGroceryList);
+        }
     }
+
+    if(!document.addEventListener){
+        groceryButton.attachEvent('onclick', showGroceryList);
+
+        if(groceryList.style.width != '0'){
+            form.attachEvent('onclick', hideGroceryList);
+        }
+    }
+
+    if(document.querySelector('.message')){
+        setInterval(function(){
+            document.querySelector('.message').style.opacity = '0';
+        }, 5000);
+        setInterval(function(){
+            document.querySelector('.message').style.display = 'none';
+        }, 6000);
+    };
 })();

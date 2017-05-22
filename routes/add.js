@@ -7,7 +7,8 @@ var check = multer();
 
 router.get('/', function(req, res){
     res.render('content/index', {
-      myList: "undefined"
+      myList: "undefined",
+      message: "undefined"
     });
 });
 
@@ -16,7 +17,8 @@ router.post('/', check.single(), function(req, res){
   var flattenItems = flatten(unflattendItems);
   console.log(flattenItems);
   res.render('content/index', {
-    myList: flattenItems
+    myList: flattenItems,
+    message: 'Ingrediënten zijn toegevoegd!'
   });
 });
 
