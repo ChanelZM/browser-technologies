@@ -35,8 +35,8 @@ li {
 form {
     margin: 8px;
     margin: 0.5rem;
-    margin-bottom: 64px;
-    margin-bottom: 4rem;
+    margin-bottom: 72px;
+    margin-bottom: 4.5rem;
 }
 
 button, input[type="submit"] {
@@ -92,6 +92,10 @@ input[type="checkbox"]:focus + label {
       border: none;
       box-shadow: 10px 10px 10px #9933ff, -10px -10px 10px #9933ff, -10px 10px 10px #9933ff, 10px -10px 10px #9933ff;
     }
+
+    input[type="submit"]:focus {
+        box-shadow: 10px 10px 10px #9933ff, -10px -10px 10px #9933ff, -10px 10px 10px #9933ff, 10px -10px 10px #9933ff;
+    }
 }
 
 input[type="checkbox"]:checked + label {
@@ -99,7 +103,7 @@ input[type="checkbox"]:checked + label {
 }
 
 input[type="submit"]{
-  background-color: #3399ff;
+  background-color: #ff9933;
   border: none;
   border-radius: 4px;
   bottom: 0;
@@ -115,11 +119,6 @@ input[type="submit"]{
   font-family: 'Pacifico', cursive;
   font-size: 1.8em;
   width: 100%;
-}
-
-input[type="submit"]:focus {
-  background-color: #ff9933;
-  outline: none;
 }
 
 .message {
@@ -164,6 +163,10 @@ input[type="submit"]:focus {
     top: 8px;
     top: 0.5rem;
     z-index: 1;
+}
+
+.togglegrocery:focus, input[type="submit"]:focus {
+    outline-color: #9933ff;
 }
 
 .grocerylist li {
@@ -223,6 +226,42 @@ input[type="submit"]:focus {
   }
 }
 
+.showgrocerylistflow {
+    display: block;
+    overflow: visible;
+    margin: 8px;
+    margin: 0.5rem;
+    padding-bottom: 8px;
+    padding-bottom: 0.5rem;
+    position: relative;
+    width: auto;
+}
+
+@media screen and (min-width: 53rem){
+    h1, form {
+        margin-left: 272px;
+        margin-left: 17rem;
+    }
+
+    .grocerylist {
+        padding: 16px;
+        padding: 1rem;
+        width: 224px;
+        width: 14rem;
+    }
+
+    .togglegrocery {
+        display: none;
+    }
+
+    input[type="submit"]{
+        left: auto;
+        margin: 0.5rem;
+        right: 0;
+        width: 20rem;
+    }
+}
+
 @media screen and (min-width: 87rem){
     h1 {
         font-size: 64px;
@@ -258,13 +297,23 @@ input[type="submit"]:focus {
     }
 
     input[type="submit"]{
-        display: inline-block;
-        position: relative;
-        padding: 0 2em 0.4em 2em;
         font-size: 2em;
     }
 
     form {
         margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: 102rem){
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50rem;
+    }
+
+    form {
+        margin-left: auto;
+        margin-right: auto;
     }
 }

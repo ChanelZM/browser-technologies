@@ -82,7 +82,7 @@
 
         groceryButton.addEventListener('click', showGroceryList);
 
-        if(groceryList.style.width != '0'){
+        if(groceryList.style.width != '0' && window.innerWidth <= 640){
             form.addEventListener('click', hideGroceryList);
         }
     }
@@ -90,8 +90,17 @@
     if(!document.addEventListener){
         groceryButton.attachEvent('onclick', showGroceryList);
 
-        if(groceryList.style.width != '0'){
-            form.attachEvent('onclick', hideGroceryList);
+        if(window.innerWidth){
+            if(groceryList.style.width != '0' && window.innerWidth <= 848){
+                form.attachEvent('onclick', hideGroceryList);
+            }
+        } else {
+            if(groceryList.style.width != '0' && window.innerWidth <= 848){
+                form.attachEvent('onclick', hideGroceryList);
+            } else {
+                groceryList.className += ' showgrocerylistflow';
+                groceryButton.style.display = 'none';
+            }
         }
     }
 
