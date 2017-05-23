@@ -12,7 +12,6 @@
     }
 
     //Check if browser supports addEventListener
-    //Credits to: http://stackoverflow.com/questions/39272718/how-do-i-detect-document-addeventlistener-support-in-javascript
     if(document.addEventListener){
         var dropSection = document.querySelector('.mylist'),
         //var submit = document.querySelector('input[type="submit"]');
@@ -60,8 +59,6 @@
             },
             //Clear the html of the list, so that item can't be added again, also remove the classes.
             end: function(e){
-                //Clear target
-                //e.target.innerHTML = '';
                 e.target.draggable = false;
                 dropSection.classList.remove('drophere');
                 dropSection.classList.remove('dropzone');

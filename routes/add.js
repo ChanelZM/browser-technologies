@@ -14,8 +14,9 @@ router.get('/', function(req, res){
 
 router.post('/', check.single(), function(req, res){
   var unflattendItems = req.body;
+  //Flatten is used to flatten arrays
   var flattenItems = flatten(unflattendItems);
-  console.log(flattenItems);
+
   res.render('content/index', {
     myList: flattenItems,
     message: 'Ingrediënten zijn toegevoegd!'
