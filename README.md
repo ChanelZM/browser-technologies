@@ -122,9 +122,13 @@ Semantic HTML is used in this webappplication so that it would be accessible for
 ### Browser support
 I tested on these devices/browsers:
 
-Apple iPad | Apple iPod | OP(?) | Nexus | Windows phone | Kindle | IE8 | IE11 | Chrome | Safari iOS | Safari MacOS
---- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
-![](images/ipad.jpg) | ![](images/ipod.jpg) | ![](images/op.jpg) | ![](images/nexus.jpg) | ![](images/windows.jpg) | ![](images/kindle.jpg) | --- | --- | --- | --- |
+Apple iPad | Apple iPod | OP(?) | Nexus | Windows phone | Kindle
+--- | --- | --- | --- | --- | --- |
+![](images/ipad.jpg) | ![](images/ipod.jpg) | ![](images/op.jpg) | ![](images/nexus.jpg) | ![](images/windows.jpg) | ![](images/kindle.jpg)
+
+IE8 | IE11 | Chrome | Safari iOS | Safari MacOS
+--- | --- | --- | --- | ---
+--- | --- | --- | --- | ---
 
 ## Bugs
 - [ ] After drag and drop, focus styles don't work properly.
