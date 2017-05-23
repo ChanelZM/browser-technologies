@@ -111,6 +111,21 @@ function(e){
 }
 ```
 
+## Test results
+### Accessibility
+#### Keyboard
+The grocery list still works when a user only uses his keyboard. The elements get a purple outline on focus. Ingredients can be selected with the spacebar. User can navigate to the submit button using the tab button and use enter to add the groceries to their list.
+
+#### Screenreader
+Semantic HTML is used in this webappplication so that it would be accessible for screenreaders. Every section contains a header, no links were used instead of buttons or `input[type="submit"]`.
+
+### Browser support
+I tested on these devices/browsers:
+
+Apple iPad | Apple iPod | OP(?) | Nexus | Windows phone | Kindle | IE8 | IE11 | Chrome | Safari iOS | Safari MacOS
+--- | --- | --- | --- | --- | --- | --- | --- | --- | --- | ---
+![](images/ipad.jpg) | ![](images/ipod.jpg) | ![](images/op.jpg) | ![](images/nexus.jpg) | ![](images/windows.jpg) | ![](images/kindle.jpg) | --- | --- | --- | --- |
+
 ## Bugs
 - [ ] After drag and drop, focus styles don't work properly.
 - [ ] IE8 doesn't support media queries so styling isn't optimal.
