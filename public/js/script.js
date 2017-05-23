@@ -92,7 +92,7 @@
                 form.attachEvent('onclick', hideGroceryList);
             }
         } else {
-            if(groceryList.style.width != '0' && window.innerWidth <= 848){
+            if(groceryList.style.width == '70%'){
                 form.attachEvent('onclick', hideGroceryList);
             } else {
                 groceryList.className += ' showgrocerylistflow';

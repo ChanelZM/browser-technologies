@@ -112,6 +112,7 @@ input[type="submit"]{
   cursor: pointer;
   display: block;
   left: 0;
+  position: relative;
   position: fixed;
   /*padding: 0 2em 0.4em 2em;*/
   right: 0;
@@ -136,13 +137,15 @@ input[type="submit"]{
   color: black;
   display: block;
   height: 100vh;
-  overflow: scroll;
   overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
   position: fixed;
   top: 0;
   transition: 0.5s cubic-bezier(.12,.71,.53,1);
   left: 0;
   bottom: 0;
+  width: auto;
   width: 0;
   z-index: 1;
 }
