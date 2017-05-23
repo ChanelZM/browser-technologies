@@ -1,8 +1,8 @@
 (function (){
-    var groceryButton = document.querySelector('.togglegrocery'),
-        groceryList = document.querySelector('.grocerylist'),
+    var groceryList = document.querySelector('.grocerylist'),
         form = document.querySelector('form'),
         body = document.querySelector('body'),
+        groceryButton,
         overlay;
 
     //Create section that will be placed over the body when the grocery list is visible
@@ -12,6 +12,16 @@
         form.insertAdjacentElement('afterend', section);
         overlay = document.querySelector('.overlay');
         overlay.style.display = 'none';
+    })();
+
+    //Create toggle button
+    (function(){
+        var button = document.createElement('BUTTON');
+        var text = document.createTextNode('Mijn lijstje');
+        button.appendChild(text);
+        button.className = 'togglegrocery';
+        groceryList.insertAdjacentElement('beforeend', button);
+        groceryButton = document.querySelector('.togglegrocery');
     })();
 
     function showGroceryList(){

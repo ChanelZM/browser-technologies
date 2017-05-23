@@ -316,6 +316,11 @@ input[type="submit"]{
     form {
         margin-bottom: 0;
     }
+
+    .message {
+        margin-left: 480px;
+        margin-left: 30rem;
+    }
 }
 
 @media screen and (min-width: 102rem){
@@ -326,6 +331,12 @@ input[type="submit"]{
     }
 
     form {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .message {
+        width: 50rem;
         margin-left: auto;
         margin-right: auto;
     }
