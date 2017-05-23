@@ -6,6 +6,8 @@
 
 The application is also backwards compatible until IE8 and responsive.
 
+*Previous assignments can be viewed in folder 'Week1' and 'Week2'*
+
 ## Demo
 A demo is viewable on http://chanel-browser-technologies.herokuapp.com/
 
