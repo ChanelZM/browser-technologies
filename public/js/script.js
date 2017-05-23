@@ -5,6 +5,9 @@
         groceryButton,
         overlay;
 
+    //When javascript is enabled add this class to make a slide section possible
+    groceryList.className += ' slideingrocery';
+
     //Create section that will be placed over the body when the grocery list is visible
     (function (){
         var section = document.createElement('SECTION');

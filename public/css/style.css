@@ -143,21 +143,25 @@ input[type="submit"]{
 /* GROCERY LIST */
 .grocerylist {
   background-color: white;
-  box-shadow: 2px 2px 5px darkgrey;
   color: black;
   display: block;
-  height: 100vh;
-  overflow-x: hidden;
-  overflow-y: scroll;
   position: relative;
-  position: fixed;
-  top: 0;
-  transition: 0.5s cubic-bezier(.12,.71,.53,1);
-  left: 0;
-  bottom: 0;
   width: auto;
-  width: 0;
   z-index: 1;
+  padding-bottom: 0.5rem;
+}
+
+.slideingrocery {
+    box-shadow: 2px 2px 5px darkgrey;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s cubic-bezier(.12,.71,.53,1);
+    width: 0;
 }
 
 .togglegrocery {
@@ -208,8 +212,7 @@ input[type="submit"]{
 
 .mylist {
     box-sizing: border-box;
-    height: 70%;
-    height: 80vh;
+    height: auto;
     margin: 8px;
     margin: 0.5rem;
 }
@@ -226,6 +229,11 @@ input[type="submit"]{
 
 .drophere {
  background-color: #ffbf80;
+}
+
+.slideingrocery .mylist {
+    height: 70%;
+    height: 80vh;
 }
 
 .mylist li input {

@@ -4,7 +4,7 @@
 ## Introduction
 'Gooi tosti's op me' is an **online grocery list**, specifically for grilled cheese, the final assignment of Browser Technologies. You can create your own grilled cheese grocery list bij selecting the ingredients that you need and adding them. If you have a newer browser you can use drag and drop to add products.
 
-The application is also backwards compatible until IE8 and responsive.
+The application is also backwards compatible until IE8 and responsive. When javascript is turned off the app will still work, even when css can not be loaded, the basic functionality of the app can be used.
 
 *Previous assignments can be viewed in folder 'Week1' and 'Week2'*
 
