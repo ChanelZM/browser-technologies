@@ -1,14 +1,28 @@
 (function (){
     var groceryButton = document.querySelector('.togglegrocery'),
         groceryList = document.querySelector('.grocerylist'),
-        form = document.querySelector('form');
+        form = document.querySelector('form'),
+        body = document.querySelector('body'),
+        overlay;
+
+    //Create section that will be placed over the body when the grocery list is visible
+    (function (){
+        var section = document.createElement('SECTION');
+        section.className = 'overlay';
+        form.insertAdjacentElement('afterend', section);
+        overlay = document.querySelector('.overlay');
+        overlay.style.display = 'none';
+    })();
 
     function showGroceryList(){
         groceryList.style.width = '70%';
+
+        overlay.style.display = 'block';
     }
 
     function hideGroceryList(){
         groceryList.style.width = '0';
+        overlay.style.display = 'none';
     }
 
     //Check if browser supports addEventListener
@@ -79,28 +93,16 @@
 
         groceryButton.addEventListener('click', showGroceryList);
 
-        if(groceryList.style.width != '0' && window.innerWidth <= 640){
-            form.addEventListener('click', hideGroceryList);
-        }
+        overlay.addEventListener('click', hideGroceryList);
     }
 
+    //For old internet explorer attachEvent
     if(!document.addEventListener){
         groceryButton.attachEvent('onclick', showGroceryList);
-
-        if(window.innerWidth){
-            if(groceryList.style.width != '0' && window.innerWidth <= 848){
-                form.attachEvent('onclick', hideGroceryList);
-            }
-        } else {
-            if(groceryList.style.width == '70%'){
-                form.attachEvent('onclick', hideGroceryList);
-            } else {
-                groceryList.className += ' showgrocerylistflow';
-                groceryButton.style.display = 'none';
-            }
-        }
+        overlay.attachEvent('onclick', hideGroceryList);
     }
 
+    //If the html contains a message, show for 5 seconds then fade out and dont show
     if(document.querySelector('.message')){
         setInterval(function(){
             document.querySelector('.message').style.opacity = '0';
