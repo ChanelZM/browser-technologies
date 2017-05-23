@@ -326,6 +326,7 @@ input[type="submit"]{
     }
 
     .message {
+        width: 50rem;
         margin-left: 480px;
         margin-left: 30rem;
     }
@@ -344,7 +345,6 @@ input[type="submit"]{
     }
 
     .message {
-        width: 50rem;
         margin-left: auto;
         margin-right: auto;
     }
