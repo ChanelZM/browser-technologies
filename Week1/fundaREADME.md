@@ -64,23 +64,65 @@ Believe it or not, not everyone uses (or owns) a mouse/trackpad. Some people don
 - If that messes up your page use tab-index.
 - Make the focus state very obvious so the user knows where they are on the page.
 
-## TO DO list Funda
-With the new information I got, it's time to 'refactor' the code I made for Funda, and make a TO DO list of the features that could be enhanced even more.
+## Funda testing
+![Screenshot of the Funda website](img/normal.png)
+*How the funda website looks when everything works as intended*
 
-### Font-stacking
-Funda only uses two fonts, so font-stacking can be very helpful here to maintain the same design.
+What if we test our Funda page on these 8 features? What would happen if we 'turned' those features off? What needs to be done to fix the problems that occur? Let's take a look at those test results.
 
-### Write server-sided using Node.js
-Node.js is js without really using js. It's still usable when JavaScript is turned off. If I write everything with Node.js, the app will work.
+### No pictures
+![](img/nopictures.png)
 
-### Check contrast
-I don't have a feeling that the contrast is going to be horrific, but it doesn't hurt to test it with simulators.
+Without pictures turned on, the page still works and falls back to alt text. Luckily, the search results stay structured. I could add a backup background-color to the position of the picture which would be visible when images don't load.
 
-### Test the webpage on slower internet using DevTools.
-Funda has a lot of images so testing the page on slower internet will give me a good insight on how fast the page is and how I can make it better.
+### No custom fonts
+![](img/nocustomfonts.png)
 
-### Make the app work without images
-Right now the app is only working when the pictures are loaded. That's really bad, so the most important thing actually is to make it work without images.
+I already had fallbacks for when custom fonts aren't supported so the styling rarely changes, because the fallback font looks like the font Funda is using.
+
+```css
+body {
+    font-family: 'Avenir', 'Al Tarikh', sans-serif;
+}
+```
+
+### No JavaScript
+![](img/nojs.png)
+
+The Funda app I created depends on javascript. API calls are made with Aja, a JS library on the client-side so when javascript cannot be executed the whole app crashes. Rendering is done with transparency so even when API calls magically work, rendering the response would still fail.
+
+### Contrast Checker
+![](img/contrast.png)
+
+The white on orange that Funda uses in their design doesn't work really good according to the contrast checker. The color combination doesn't pass on:
+- Fonts below 18 points (old and new success criterion).
+- Fonts over 18 points (old and new success criterion).
+- Brightness and color difference.
+- Readability for colorblind people.
+
+I could turn the white color into black, the result of the contrast checker is green for every criterion.
+
+### Slow Internet
+![](img/internet.png)
+
+The DOM renders pretty fast but loading all the pictures takes a long time, when you're on regular 2G. After 10 seconds the first image is loaded in the DOM.
+
+### No Cookies
+I didn't use cookies while creating this Funda app :tada::tada:!
+
+### No localStorage
+I didn't use localStorage while creating this Funda app :tada::tada:!
+
+### No Mouse/trackpad
+![](img/accessibility.png)
+
+Navigating through the page with a keyboard is possible but the focus styles aren't always visible. Such as the focus style on search button. The button changes from blue to orange on focus and on desktop it's not clear anymore which element has focus.
+
+Creating a more visible focus style should resolve this problem.
+
+### Screenreader
+Because the labels in the desktop version of Funda aren't displayed, the screenreader doesn't read the labels, leaving the user guessing what kind of information is required of them.
+
 
 ## Sources
 1. Kryogenix.org. (no date). *Everybody has JavaScript, right?*. Source: https://kryogenix.org/code/browser/everyonehasjs.html
