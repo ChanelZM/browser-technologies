@@ -117,18 +117,24 @@ function(e){
 The grocery list still works when a user only uses his keyboard. The elements get a purple outline on focus. Ingredients can be selected with the spacebar. User can navigate to the submit button using the tab button and use enter to add the groceries to their list.
 
 #### Screenreader
-Semantic HTML is used in this webappplication so that it would be accessible for screenreaders. Every section contains a header, no links were used instead of buttons or `input[type="submit"]`.
+Semantic HTML is used in this webappplication so that it would be accessible for screenreaders. Every section contains a header, no links were used instead of buttons or `input[type="submit"]`. The app is fully accessible when you are using a screenreader.
 
 ### Browser support
 I tested on these devices/browsers:
 
-Apple iPad | Apple iPod | OP(?) | Nexus | Windows phone | Kindle
---- | --- | --- | --- | --- | --- |
-![](images/ipad.jpg) | ![](images/ipod.jpg) | ![](images/op.jpg) | ![](images/nexus.jpg) | ![](images/windows.jpg) | ![](images/kindle.jpg)
+Apple iPad | Apple iPod | OP(?)
+--- | --- | ---
+![](images/ipad.jpg) | ![](images/ipod.jpg) | ![](images/op.jpg)
+On the iPad the app worked fine. The sliding grocery list worked, you could select ingredients and the selected elements would have a different color. You could add them them to your list. | On the iPad the basic functionality worked but the sliding grocery list animation did not work. It just popped up when you clicked the button. The text was also too big, because of that the title was partially hidden behind the 'Mijn lijstje' button. | On this device (don't know the name), the css property `appearance: none;` didn't work, causing the buttons to look a bit different.
+
+Nexus | Windows phone | Kindle
+--- | --- | ---
+![](images/nexus.jpg) | ![](images/windows.jpg) | ![](images/kindle.jpg)
+Same as the iPad, Nexus had no problems with the app. | On a Windows Phone the app works fine but same as  the iPod, the text was way too big. | The Kindle screenreader had a experimental browser that wasn't really capable of a lot. `position: fixed,` had partial support and worked as `position: absolute;` so the button 'Toevoegen' did not stay at the bottom of the screen. Also the animation for the grocery list did not work. Toggling the grocery list did work so the basic functionality of adding and viewing your list worked. Selected items didn't change color but the checkboxes were visble for feedback.
 
 IE8 | IE11 | Chrome | Safari iOS | Safari MacOS
 --- | --- | --- | --- | ---
---- | --- | --- | --- | ---
+The basic functionality works on IE8 but the drag and drop did not work. Also `clip: rect(0, 0, 0, 0)` is not supported so the checkboxes were visible. Hover states and changing color when selected didn't work but focus states did. | Surprisingly after a lot of hours the drag and drop worked on IE11 and so did everything else | Chrome is the browser  for programmers. Ultimately the app worked the way it should work. | I forgot the `appearance: none;` when I tested on my iPhone so the buttons had default styling. Other than that it worked fine.| Everything worked perfectly on safari. On desktop the drag and drop worked.
 
 ## Bugs
 - [ ] After drag and drop, focus styles don't work properly.
